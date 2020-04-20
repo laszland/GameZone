@@ -6,10 +6,6 @@ import ReviewDetails from './screens/reviewDetails';
 
 export default function App() {
   return (
-    <View>
-      <Home/>
-      <About/>
-      <ReviewDetails/>
-    </View>
+    <Home/>
   );
 }
