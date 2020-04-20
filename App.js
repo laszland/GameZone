@@ -1,11 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import * as Font from 'expo-font';
+import { AppLoading } from 'expo';
 import Home from './screens/home';
-import About from './screens/about';
-import ReviewDetails from './screens/reviewDetails';
+
+const getFont = () => Font.loadAsync({
+    'nunito-regular': require('./assets/fonts/Nunito-Regular.ttf'),
+    'nunito-bold': require('./assets/fonts/Nunito-Bold.ttf')
+});
 
 export default function App() {
-  return (
-    <Home/>
-  );
+  // call the font is async so the rest of the code has to wait till the font is get loaded
+  const [fontsLoaded, setFontsLoaded] = useState(false);
+  // check, are the fonts loaded
+  if (fontsLoaded) {
+    return (
+      <Home/>
+    );
+  } else {
+    return (
+      <AppLoading
+        startAsync={getFont}
+        onFinish={() => setFontsLoaded(true)}
+      />
+    )
+  }
 }
