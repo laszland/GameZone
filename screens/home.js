@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, FlatList, TouchableOpacity } from 'react-native';
 import { globalStyles } from '../styles/global';
+import Card from '../shared/card';
 
 export default function Home({ navigation }) {
 
@@ -16,9 +17,11 @@ export default function Home({ navigation }) {
         data={reviews}
         renderItem={( {item} ) => (
           <TouchableOpacity>
-            <Text
-            style={globalStyles.titleText}
-            onPress={() => navigation.navigate('ReviewDetails', item)}>{item.title}</Text>
+            <Card>
+              <Text
+              style={globalStyles.titleText}
+              onPress={() => navigation.navigate('ReviewDetails', item)}>{item.title}</Text>
+            </Card>
           </TouchableOpacity>
         )}
       />
