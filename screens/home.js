@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, FlatList, TouchableOpacity, Modal } from 'react
 import { globalStyles } from '../styles/global';
 import Card from '../shared/card';
 import { MaterialIcons } from '@expo/vector-icons';
+import ReviewForm from './reviewForm';
 
 export default function Home({ navigation }) {
 
@@ -24,7 +25,7 @@ export default function Home({ navigation }) {
           style={{...styles.modalToggle, ...styles.modalClose}}
           onPress={() => setModalOpen(false)}
           />
-          <Text>Hello from the modal! :)</Text>
+          <ReviewForm />
         </View>
       </Modal>
 
