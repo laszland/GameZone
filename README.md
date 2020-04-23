@@ -1,7 +1,7 @@
 # GameZone
-## A Practice Project
+## React-Native App
 
-This project is learning project based on [React-Native Tutorial for Beginners](https://www.youtube.com/playlist?list=PL4cUxeGkcC9ixPU-QkScoRBVxtPPzVjrQ) course of The Net Ninja.
+This project is a learning project based on [React-Native Tutorial for Beginners](https://www.youtube.com/playlist?list=PL4cUxeGkcC9ixPU-QkScoRBVxtPPzVjrQ) course of The Net Ninja.
 
 **What I learned:**
 * React-Native in general;
