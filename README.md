@@ -14,6 +14,7 @@ This project is a learning project based on [React-Native Tutorial for Beginners
 * using [Yup](https://github.com/jquense/yup) to validate user's input.
 
 **How to use the app?**
+
 In order to see this application you have to install [Expo](https://expo.io).
 
 1. Download/clone this repository.
