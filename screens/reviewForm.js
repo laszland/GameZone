@@ -36,7 +36,9 @@ export default function ReviewForm({ addReview }) {
               placeholder='Review Title'
               onChangeText={formikprops.handleChange('title')}
               value={formikprops.values.title}
+              onBlur={formikprops.handleBlur('title')}
             />
+            <Text style={globalStyles.errorText}>{ formikprops.touched.title && formikprops.errors.title }</Text>
 
             <TextInput
               multiline
@@ -44,7 +46,9 @@ export default function ReviewForm({ addReview }) {
               placeholder='Review Body'
               onChangeText={formikprops.handleChange('body')}
               value={formikprops.values.body}
+              onBlur={formikprops.handleBlur('body')}
             />
+            <Text style={globalStyles.errorText}>{ formikprops.touched.body && formikprops.errors.body }</Text>
 
             <TextInput
               style={globalStyles.input}
@@ -52,7 +56,9 @@ export default function ReviewForm({ addReview }) {
               onChangeText={formikprops.handleChange('rating')}
               value={formikprops.values.rating}
               keyboardType='numeric'
+              onBlur={formikprops.handleBlur('rating')}
             />
+            <Text style={globalStyles.errorText}>{ formikprops.touched.rating && formikprops.errors.rating }</Text>
 
             <Button title='submit' color='maroon' onPress={formikprops.handleSubmit} />
           </View>
